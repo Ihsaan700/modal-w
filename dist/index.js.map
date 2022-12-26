@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../index.js"],
+  "sourcesContent": ["const cardButtons = document.querySelectorAll(\"a.button\");\nconst modal = document.querySelector(\"div.modal\");\n\nfunction handleButtonClick (event) {\n\tconst button = event.currentTarget;\n\tconst card = button.closest(\".card\");\n\tmodal.classList.add(\"open\");\n\tconsole.log(card)\n}\n\nfunction modalClose() {\n\tmodal.classList.remove(\"open\");\n}\n\nmodal.addEventListener(\"click\", function(event) {\n\tconst isOutside = event.target.closest(\".modal_inner\");\n\tif (!isOutside) {\n\t\tmodalClose();\n\t}\n})\n\nwindow.addEventListener(\"keydown\", function (event) {\n\tif (event.key === \"Escape\") {\n\t\tmodalClose();\n\t}\n})\n\ncardButtons.forEach(button => button.addEventListener(\"click\", handleButtonClick));\n"],
+  "mappings": "MAAA,IAAMA,EAAc,SAAS,iBAAiB,UAAU,EAClDC,EAAQ,SAAS,cAAc,WAAW,EAEhD,SAASC,EAAmBC,EAAO,CAElC,IAAMC,EADSD,EAAM,cACD,QAAQ,OAAO,EACnCF,EAAM,UAAU,IAAI,MAAM,EAC1B,QAAQ,IAAIG,CAAI,CACjB,CAEA,SAASC,GAAa,CACrBJ,EAAM,UAAU,OAAO,MAAM,CAC9B,CAEAA,EAAM,iBAAiB,QAAS,SAASE,EAAO,CAC7BA,EAAM,OAAO,QAAQ,cAAc,GAEpDE,EAAW,CAEb,CAAC,EAED,OAAO,iBAAiB,UAAW,SAAUF,EAAO,CAC/CA,EAAM,MAAQ,UACjBE,EAAW,CAEb,CAAC,EAEDL,EAAY,QAAQM,GAAUA,EAAO,iBAAiB,QAASJ,CAAiB,CAAC",
+  "names": ["cardButtons", "modal", "handleButtonClick", "event", "card", "modalClose", "button"]
+}

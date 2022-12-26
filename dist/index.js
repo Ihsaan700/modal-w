@@ -1,0 +1,2 @@
+(()=>{var s=document.querySelectorAll("a.button"),e=document.querySelector("div.modal");function d(t){let c=t.currentTarget.closest(".card");e.classList.add("open"),console.log(c)}function n(){e.classList.remove("open")}e.addEventListener("click",function(t){t.target.closest(".modal_inner")||n()});window.addEventListener("keydown",function(t){t.key==="Escape"&&n()});s.forEach(t=>t.addEventListener("click",d));})();
+//# sourceMappingURL=index.js.map
